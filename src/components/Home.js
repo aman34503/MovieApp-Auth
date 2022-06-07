@@ -5,6 +5,7 @@ import "../App.css"
 import MovieListHead from "./MovieListHeading";
 import SearchBox from "./SearchBox";
 import AddFavourites from "./AddFavourites";
+import RemoveFavourites from "./RemoveFavourites";
 
 const API_KEY = 'bb58beb0';
 
@@ -85,7 +86,7 @@ const Home = ({handleLogout}) => {
         <Movielist
           movies={favourites}
           handleFavouritesClick={removeFavouriteMovie}
-          favouriteComponent={removeFavouriteMovie}
+          favouriteComponent={RemoveFavourites}
         />
       </div>
     </div>

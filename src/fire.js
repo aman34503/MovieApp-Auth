@@ -13,7 +13,7 @@ import 'firebase/compat/firestore';
   };
 
   // Initialize Firebase
-  const firebaseApp = firebase.initializeApp(firebaseConfig);
+  const firebaseapp = firebase.initializeApp(firebaseConfig);
 
 
 export default firebase;

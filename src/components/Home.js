@@ -6,6 +6,8 @@ import MovieListHead from "./MovieListHeading";
 import SearchBox from "./SearchBox";
 import AddFavourites from "./AddFavourites";
 
+const API_KEY = 'bb58beb0';
+
 const Home = ({handleLogout}) => {
   const [movies, setMovies] = useState([]);
   const [favourites, setfavourites] = useState([]);
@@ -13,7 +15,7 @@ const Home = ({handleLogout}) => {
 
   const getMovieRequest = async (searchmovie) => {
     //Convert into a template string by just adding Backtick on it.
-    const url = ` http://www.omdbapi.com/?s=${searchmovie}&apikey=bb58beb0 `;
+    const url = ` http://www.omdbapi.com/?s=${searchmovie}&apikey=${API_KEY}`;
 
     const res = await fetch(url);
     const resjson = await res.json();
@@ -22,7 +24,7 @@ const Home = ({handleLogout}) => {
       setMovies(resjson.Search);
     }
 
-    console.log(resjson);
+    // console.log(resjson);
     // setMovies(resjson.Search);
   };
 

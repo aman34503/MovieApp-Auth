@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import fire from "./fire";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -93,6 +93,7 @@ const App = () => {
         hasAccount={hasAccount}
         emailError={emailError}
         passwordError={passwordError}
+        setHasAccount={setHasAccount}
       />
     ) }
     </div>
